@@ -18,4 +18,4 @@ names.each do |x| print x end
 
 names.shuffle
 
-names.include?)("Sally")
+names.include?("Sally")
