@@ -1,0 +1,25 @@
+body { 
+	background-color: #d1d5dd;
+}
+
+.head { 
+	background-color: #dd6e77;
+	height: 400px;
+}
+
+.body {
+	background-color: yellow;
+	height: 400px;
+}
+
+.feet { 
+	background-color: #FACADE; 
+	height: 400px;
+}
+
+.cube {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	border: 1px solid black;
+}
