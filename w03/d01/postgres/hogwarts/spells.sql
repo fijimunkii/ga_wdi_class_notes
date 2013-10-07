@@ -1,0 +1,4 @@
+CREATE TABLE spells (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR
+);
