@@ -11,3 +11,5 @@ d1.most_known_movie = "Edward Scissorhands"
 
 p d1.imdb
 p d1.most_known_movie
+
+d1.work

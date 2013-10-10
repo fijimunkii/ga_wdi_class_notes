@@ -7,7 +7,7 @@ db_connection = PG.connect(
 )
 
 50.times do
-	sql = "INSERT INTO users (username) VALUES ('#{Faker::Name.name}')"
+	sql = "INSERT INTO users (username) VALUES ('#{Faker::Name.name.gsub("'", "\\\\'")}')"
 	db_connection.exec(sql)
 end
 

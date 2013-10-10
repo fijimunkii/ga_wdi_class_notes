@@ -1,0 +1,42 @@
+<h1>Apt Search!</h1>
+
+<form action="/results" method="get">
+	<label for="query">Search</label>
+	<input type="text" name="query" id="query">
+
+	<br /><br />
+	
+	<label for="searchingfor_room">Room</label>
+	<input type="radio" name="room" value="true" id="searchingfor_room">
+
+	<br />
+	
+	<label for="searchingfor_roommate">Roommate</label>
+	<input type="radio" name="roomate" value="false" id="searchingfor_roommate">
+
+	<br /><br />
+
+	<label for="location_manhattan">Manhattan</label>
+	<input type="checkbox" name="location[]" value="manhattan" id="location_manhattan"><br />
+	<label for="location_brooklyn">Brooklyn</label>
+	<input type="checkbox" name="location[]" value="brooklyn" id="location_brooklyn"><br />
+	<label for="location_queens">Queens</label>
+	<input type="checkbox" name="location[]" value="queens" id="location_queens"><br />
+	<label for="location_bronx">Bronx</label>
+	<input type="checkbox" name="location[]" value="bronx" id="location_bronx"><br />
+	<label for="location_staten_island">Staten Island</label>
+	<input type="checkbox" name="location[]" value="staten_island" id="location_staten_island"><br />
+	
+	<br />
+
+	<select name="Distance">
+		<option value="5">5 Miles</option>
+		<option value="10">10 Miles</option>
+		<option value="20">20 Miles</option>
+	</select>
+
+	<label for="picture_option">Picture</label>
+	<input type="checkbox" name="picture" value="true" id="picture_option">
+
+	<input type="submit" value="Search">
+</form>

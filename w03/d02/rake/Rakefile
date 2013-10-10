@@ -1,0 +1,58 @@
+desc 'says hello'
+task :hello do
+  print "hello kick hash"
+end
+
+desc 'grab attention'
+task :kick_hash => :hello do
+  `say kick hash, clap once if you can hear me!`
+  puts ", clap once if you can hear me"
+end
+
+desc 'makes a folder'
+task :make_folder do
+  mkdir 'new_dir' unless Dir.exists?('new_dir')
+end
+
+desc 'makes a file'
+task :make_file do
+  touch 'new_dir/robots.txt'
+end
+
+desc 'writes to a file'
+task :write_to_file do
+  puts "Writing to file..."
+  file = File.open('new_dir/robots.txt', "w")
+  file.puts "I AM A ROBOT"
+  file.close
+end
+
+
+namespace :homework do
+
+  desc 'make my name folder'
+  task :make_my_folder do
+    mkdir 'harrison_powers' unless Dir.exists?('harrison_powers')
+  end
+
+  desc 'create my readme'
+  task :make_my_readme do
+    touch 'harrison_powers/readme.md'
+  end
+
+  desc 'write to my readme'
+  task :write_to_my_readme do
+    puts "Writing to file..."
+    file = File.open('harrison_powers/readme.md', 'w')
+    file.puts 'Harrison Powers'
+    file.close
+  end
+
+  desc 'creates personal folder and readme'
+  task :prepare => [:make_my_folder, :make_my_readme, :write_to_my_readme] do
+    puts 'all set have fun'
+  end
+
+end
+
+task :default => 'homework:prepare'

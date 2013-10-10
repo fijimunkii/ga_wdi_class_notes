@@ -1,0 +1,27 @@
+<h1>Yelp!</h1>
+
+<form action="/results" method="get">
+	<label for="query">Search</label>
+	<input type="text" name="query" id="query">
+	
+	<br />
+	<label for="cuisine_asian">Asian</label>
+	<input type="checkbox" name="cuisine[]" value="asian" id="cuisine_asian"><br />
+	<label for="cuisine_pizza">Pizza</label>
+	<input type="checkbox" name="cuisine[]" value="pizza" id="cuisine_pizza"><br />
+	<label for="cuisine_italian">Italian</label>
+	<input type="checkbox" name="cuisine[]" value="italian" id="cuisine_italian"><br />
+
+	<select name="location">
+		<option value="bk">Brooklyn</option>
+		<option value="mn">Manhattan</option>
+	</select>
+
+	<label for="cheap_food">Cheap</label>
+	<input type="radio" name="cheap" value="true" id="cheap_food">
+
+	<label for="expensive_food">Expensive</label>
+	<input type="radio" name="cheap" value="false" id="expensive_food">
+
+	<input type="submit" value="Search">
+</form>

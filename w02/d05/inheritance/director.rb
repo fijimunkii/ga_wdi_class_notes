@@ -5,7 +5,8 @@ class Director < Person
 	attr_accessor :imdb, :most_known_movie
 
 	def work
-		`say no foam in my orange mocha frappachino`
+		super
+		`say no foam in my orange mocha frappacheeno`
 	end
 
 end
