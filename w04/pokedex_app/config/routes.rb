@@ -1,6 +1,6 @@
 PokedexApp::Application.routes.draw do
 
-  get '/' redirect('/gyms')
+  get '/' => redirect('/gyms')
 
   get '/gyms' => 'gyms#index'
   get '/gyms/new' => 'gyms#new'
