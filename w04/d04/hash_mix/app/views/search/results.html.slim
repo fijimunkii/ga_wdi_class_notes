@@ -1,0 +1,13 @@
+= params
+
+br/
+br/
+
+.search
+  h1 past searches
+  - session['searches'].each do |time, search|
+    = "#{time}"
+    br/
+
+.ad
+  img src="#{@img_url}"

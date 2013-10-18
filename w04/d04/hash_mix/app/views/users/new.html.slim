@@ -1,0 +1,6 @@
+h1 signup
+
+= form_for @user do |f|
+  = f.text_field :email, :placeholder => 'Email..', :required => true
+  = f.password_field :password, :placeholder => 'Password..', :required => true
+  = f.submit
