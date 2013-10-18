@@ -1,0 +1,5 @@
+- @spells.each do |spell|
+  = link_to spell.name, "/spells/#{spell.id}"
+  br/
+br/
+= link_to 'New Spell', '/spells/new'

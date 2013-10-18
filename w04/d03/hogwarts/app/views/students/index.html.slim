@@ -1,0 +1,9 @@
+h1 students
+- @students.each do |student|
+  a href="/students/#{student.id}"
+    = student.name
+    br/
+
+br/
+
+= link_to 'New Student', '/students/new'

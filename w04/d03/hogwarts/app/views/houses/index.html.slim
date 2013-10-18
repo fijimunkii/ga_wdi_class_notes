@@ -1,0 +1,8 @@
+h1 houses
+- @houses.each do |house|
+  a href="/houses/#{house.id}"
+    = house.name
+    br/
+
+br/
+= link_to 'new house', '/houses/new'

@@ -1,5 +1,8 @@
 Hogwarts::Application.routes.draw do
 
+  root to: 'houses#index'
+
+  resources :houses, :students, :spells
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
