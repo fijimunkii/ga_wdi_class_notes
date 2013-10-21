@@ -31,12 +31,16 @@ head
         = content_tag :div, msg, :id => "flash_#{name}"
     .header
       - if current_user
-        = link_to 'logout', '/sessions/'
+        = " | "
+        = link_to "#{current_user.email}", "/users/#{current_user.id}"
+        = " | "
+        = link_to 'logout', '/logout'
+        = " | "
       - else
         = " | "
         = link_to 'signup', '/users/new'
         = " | "
-        = link_to 'login', '/sessions/new'
+        = link_to 'login', '/login'
         = " | "
     .container
-    == yield
+      == yield

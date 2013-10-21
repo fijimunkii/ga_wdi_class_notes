@@ -55,7 +55,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    # redirect to the search, so the root
+    redirect_to :back
   end
 
 end

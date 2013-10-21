@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    User.new params[:user]
+    user = User.new params[:user]
     if user.save
       redirect_to :back
     else
