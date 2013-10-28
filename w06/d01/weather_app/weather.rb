@@ -1,6 +1,7 @@
 class Weather
 
-  attr_reader :type, :temp, :type_conv
+  attr_reader :type
+  attr_accessor :temp
 
   def initialize(type)
     @type = type.downcase
@@ -9,26 +10,23 @@ class Weather
   def type_conv
     # if self.type == fahrenheit
     #   return (self.temp.to_f - 32) * 5 / 9
-    if @type == 'celcius'
-      return (@temp.to_f * 9 / 5) + 32
-    else
-      return @temp.to_f
+    case @type
+    when 'celcius'
+      (@temp.to_f * 9 / 5) + 32
+    when 'fahrenheit'
+      @temp.to_f
     end
-  end
-
-  def temp=(temperature)
-    @temp = temperature
   end
 
   def dress
     case
-    when self.type_conv < 0
+    when type_conv < 0
       'Stay inside!'
-    when self.type_conv < 30 && self.type_conv >= 0
+    when type_conv.between?(0,30)
       'Bundle up!'
-    when self.type_conv >= 30 && self.type_conv <= 60
+    when type_conv.between?(30,60)
       "It's getting cold, wear long sleeves"
-    when self.type_conv > 60
+    when type_conv > 60
       "Wear short sleeves"
     end
   end
