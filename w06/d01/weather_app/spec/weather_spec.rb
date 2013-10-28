@@ -21,7 +21,7 @@ describe "The Weather class can" do
   it 'interpret mild weather' do
     weather = Weather.new('fahrenheit')
     weather.temp = 50
-    expect(weather.dress).to eq("It's getting cold, wear long sleeves")
+    expect(weather.dress).to eq("It's cold, wear long sleeves")
   end
   it 'interpet cold weather' do
     weather = Weather.new('fahrenheit')

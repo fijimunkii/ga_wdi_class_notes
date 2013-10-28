@@ -25,7 +25,7 @@ class Weather
     when type_conv.between?(0,30)
       'Bundle up!'
     when type_conv.between?(30,60)
-      "It's getting cold, wear long sleeves"
+      "It's cold, wear long sleeves"
     when type_conv > 60
       "Wear short sleeves"
     end
