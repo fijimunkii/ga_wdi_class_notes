@@ -1,4 +1,6 @@
-function Person();
+function Person(){
+
+};
 
 var p1 = new Person();
 
