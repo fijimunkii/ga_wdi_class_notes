@@ -1,0 +1,21 @@
+body {
+  background: #000;
+  color: aqua;
+}
+
+#enterprise {float:left;}
+
+#crew {
+float:left;
+}
+
+#vulcan {
+  float:left;
+  clear: both;
+}
+
+#vulcan-dudes{
+  float:left;
+  clear:both;
+  color: red;
+}
