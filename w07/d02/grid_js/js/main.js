@@ -21,12 +21,16 @@
 
   Paint.loadTiles(100, 200);
 
-  $('.tile').on('mouseover', function(){
-    $('#'+this.id).addClass('green');
+  $('.tile').on('mouseover', function() {
+    $(this).addClass('hover-green');
   });
 
-  $('.tile').on('mouseoff', function(){
-    $('#'+this.id).removeClass('green');
+  $('.tile').on('mouseout', function() {
+    $(this).removeClass('hover-green');
   });
+
+  $('.tile').on('click', function() {
+    $(this).addClass('painted-green');
+  })
 
 })();
