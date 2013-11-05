@@ -19,4 +19,14 @@
 
   });
 
+  Paint.loadTiles(100, 200);
+
+  $('.tile').on('mouseover', function(){
+    $('#'+this.id).addClass('green');
+  });
+
+  $('.tile').on('mouseoff', function(){
+    $('#'+this.id).removeClass('green');
+  });
+
 })();
