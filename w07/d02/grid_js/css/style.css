@@ -1,10 +1,23 @@
-* {
+body {
   background: black;
 }
 
-.tile {float:left; margin: 1px;}
+.tile {float:left; /*margin: 1px;*/}
+
+.color-submit {
+  display: inline;
+  border: 1px solid white;
+  background: orange;
+}
 
 .white {background: white;}
+.red {background: red;}
+.orange {background: orange;}
+.yellow {background: yellow;}
+.green {background: green;}
+.blue {background: blue;}
+.indigo {background: indigo;}
+.violet {background: violet;}
 
 .hover-white {background: white;}
 .hover-red {background: red;}
