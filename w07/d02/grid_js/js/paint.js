@@ -10,7 +10,7 @@ Paint.loadTiles = function(rows, num, size) {
     tableString += '<tr>';
 
     for (var i=0; i<num; i++) {
-      tableString += '<td><div class=\'tile white\' style=\'height:' + size + 'px; width: ' + size + 'px;\'></div></td>';
+      tableString += '<td><div class=\'tile painted-white\' style=\'height:' + size + 'px; width: ' + size + 'px;\'></div></td>';
     }
 
     tableString += '</tr>';
