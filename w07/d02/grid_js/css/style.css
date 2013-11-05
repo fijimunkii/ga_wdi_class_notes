@@ -1,3 +1,9 @@
+* {
+  background: black;
+}
+
+.tile {float:left; margin: 1px;}
+
 .white {background: white;}
 .red {background: red;}
 .orange {background: orange;}

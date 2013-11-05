@@ -1,9 +1,9 @@
 (function() {
 
-  $('body').addClass('white');
-
-  var $button = $('<button>');
-  $('body').append($button);
+  var $header = $('<header>'),
+      $button = $('<button>');
+  $('body').append($header);
+  $header.append($button);
 
   $button.on('click', function(){
     var colors = ['white','red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
