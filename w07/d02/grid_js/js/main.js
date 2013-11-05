@@ -19,7 +19,7 @@
 
   });
 
-  Paint.loadTiles(100, 200);
+  Paint.loadTiles(10, 10, 50);
 
   $('.tile').on('mouseover', function(e) {
     $(this).addClass('hover-green');
