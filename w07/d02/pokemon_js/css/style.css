@@ -1,0 +1,29 @@
+body {
+  background: black;
+}
+
+.tile {float:left;}
+
+.color-submit {
+  display: inline;
+  border: 1px solid white;
+  background: orange;
+}
+
+.hover-white {background: white;}
+.hover-red {background: red;}
+.hover-orange {background: orange;}
+.hover-yellow {background: yellow;}
+.hover-green {background: green;}
+.hover-blue {background: blue;}
+.hover-indigo {background: indigo;}
+.hover-violet {background: violet;}
+
+.painted-white {background: white;}
+.painted-red {background: red;}
+.painted-orange {background: orange;}
+.painted-yellow {background: yellow;}
+.painted-green {background: green;}
+.painted-blue {background: blue;}
+.painted-indigo {background: indigo;}
+.painted-violet {background: violet;}
