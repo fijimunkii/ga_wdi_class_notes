@@ -6,7 +6,12 @@ body {
 #enterprise {float:left;}
 
 #crew {
-float:left;
+  float:left;
+}
+
+#refugees{
+  float:left;
+  color:green;
 }
 
 #vulcan {

@@ -1,9 +1,19 @@
 (function addTheVulcans(){
   var vulcans = ["Sarek", "Skon", "Solkar", "Sybok"];
   for (i in vulcans) {
+
     var pTag = document.createElement('p');
     pTag.textContent = vulcans[i];
     $('#vulcan-dudes').appendChild(pTag);
+    pTag.addEventListener('click', function() {
+
+      var form = new FormData();
+      form.append('refugee[name]', this.textContent);
+      var xhr = new XMLHttpRequest();
+      xhr.open('post', '/refugees', false);
+      xhr.send(form);
+      $('#vulcan-dudes').removeChild(this);
+    })
   }
 })();
 
@@ -28,10 +38,28 @@ $('#enterprise').addEventListener('mouseover', function() {
   }
   xhr.open('get', '/crew_members', false);
   xhr.send();
+
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState === 4) {
+      var refugees = JSON.parse(this.response);
+      var ul = document.createElement('ul');
+      $('#refugees').appendChild(ul);
+
+      for (i in refugees) {
+        var li = document.createElement('li');
+        li.textContent = refugees[i].name;
+        ul.appendChild(li);
+      }
+    }
+  }
+  xhr.open('get', '/refugees', false);
+  xhr.send();
 })
 
 $('#enterprise').addEventListener('mouseout', function() {
   $('#crew').textContent = '';
+  $('#refugees').textContent = '';
 });
 
 $('#vulcan').addEventListener('dblclick', function() {
