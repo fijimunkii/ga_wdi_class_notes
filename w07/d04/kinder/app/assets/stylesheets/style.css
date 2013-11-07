@@ -1,0 +1,25 @@
+#cat-img {
+  width: 100%;
+}
+
+.button {
+  z-index: 1;
+  position: absolute;
+  top: 5%;
+  width: 150px;
+  height: 75px;
+  border-radius: 75%;
+  opacity: .4;
+  background:#fff;
+  font-size: 50px;
+  text-align: center;
+  line-height: 75px;
+  vertical-align: middle;
+}
+
+.hover {
+  opacity: .8;
+}
+
+#hot { left: 10%; }
+#not { right: 10%; }

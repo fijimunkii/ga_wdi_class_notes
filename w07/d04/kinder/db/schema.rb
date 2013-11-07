@@ -14,9 +14,9 @@
 ActiveRecord::Schema.define(:version => 20131107152713) do
 
   create_table "cats", :force => true do |t|
-    t.string   "img_url"
-    t.integer  "num_hot"
-    t.integer  "num_not"
+    t.string   "img_url", :required => true
+    t.integer  "num_hot", :default => 0
+    t.integer  "num_not", :default => 0
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
