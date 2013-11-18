@@ -2,6 +2,8 @@ class Bus
 
   def initialize
     @passengers = []
+    @fares = 0
+    @bank = 0
   end
 
   def empty?
@@ -15,6 +17,8 @@ class Bus
   def add(passenger)
     if !self.contains?(passenger)
       @passengers << passenger
+      @fares += 1
+      @bank += 2.5
     end
   end
 
@@ -24,6 +28,14 @@ class Bus
 
   def size
     @passengers.count
+  end
+
+  def money
+    @bank
+  end
+
+  def fares
+    @fares
   end
 
 

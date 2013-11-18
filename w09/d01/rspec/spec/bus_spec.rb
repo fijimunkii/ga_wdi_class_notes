@@ -43,4 +43,20 @@ describe Bus do
     expect(bus.size).to eq(1)
   end
 
+  it "collects money from each passenger" do
+    bus = Bus.new
+    bus.add("Mick Jagger")
+    bus.add("Keith Richards")
+    expect(bus.money).to eq(5.0)
+  end
+
+  it "records number of fares" do
+    bus = Bus.new
+    bus.add("Mick Jagger")
+    expect(bus.fares).to eq(1)
+    bus.add("Keith Richards")
+    bus.remove("Mick Jagger")
+    expect(bus.fares).to eq(2)
+  end
+
 end
