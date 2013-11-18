@@ -3,6 +3,7 @@ class Bus
   def initialize
     @passengers = []
     @fares = 0
+    @fare = 2.5
     @bank = 0
     @capacity = 20
   end
@@ -16,10 +17,10 @@ class Bus
   end
 
   def add(passenger)
-    if !self.contains?(passenger) && self.size < @capacity
+    if !self.contains?(passenger) && self.size < @capacity && passenger.balance >= @fare
       @passengers << passenger
       @fares += 1
-      @bank += 2.5
+      @bank += @fare
     end
   end
 
@@ -37,6 +38,10 @@ class Bus
 
   def fares
     @fares
+  end
+
+  def fare
+    @fare
   end
 
   def wheels
