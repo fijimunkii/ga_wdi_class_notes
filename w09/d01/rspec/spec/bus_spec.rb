@@ -59,4 +59,19 @@ describe Bus do
     expect(bus.fares).to eq(2)
   end
 
+  it "can only hold 20 people max" do
+    bus = Bus.new
+    20.times do |n|
+      bus.add(n)
+    end
+    expect(bus.size).to eq(20)
+    bus.add('the straw')
+    expect(bus.size).to eq(20)
+  end
+
+  it "'s wheels go round and round" do
+    bus = Bus.new
+    expect(bus.wheels).to eq("round and round")
+  end
+
 end
