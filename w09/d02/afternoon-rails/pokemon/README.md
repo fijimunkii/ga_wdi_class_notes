@@ -1,5 +1,6 @@
 Trainer
   - properties
+    - name
     - email
     - password
     - password_confirmation
@@ -21,9 +22,20 @@ Pokemon
     - name
     - species
     - health
-      - starts at 100 and is capped at 100
+      - starts at 80 and is capped at 100
     - energy
-      - start at 100 and is also capped at 100
+      - start at 80 and is also capped at 100
+
+  - validations / things to test for
+
+    - if the trainer dies (or is destroyed), the pokemon are destroyed as well
+    - they must belong to a trainer
+    - initial conditions
+      - validate that they have a name, spiecies
+      - when they are born
+        - their health starts at 80
+        - their energy also starts at 80
+
 
   - methods
     - recover
