@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131119190533) do
+ActiveRecord::Schema.define(:version => 20131119200906) do
+
+  create_table "monsters", :force => true do |t|
+    t.string   "name"
+    t.string   "species"
+    t.integer  "health",     :default => 80
+    t.integer  "energy",     :default => 80
+    t.integer  "trainer_id"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
 
   create_table "trainers", :force => true do |t|
     t.string   "email"
