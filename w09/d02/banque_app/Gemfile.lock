@@ -32,9 +32,7 @@ GEM
       rake
     arel (3.0.3)
     awesome_print (1.2.0)
-    better_errors (1.0.1)
-      coderay (>= 1.0.0)
-      erubis (>= 2.6.6)
+    bcrypt-ruby (3.0.1)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.0.4)
@@ -178,7 +176,7 @@ PLATFORMS
 DEPENDENCIES
   annotate
   awesome_print
-  better_errors
+  bcrypt-ruby (~> 3.0.0)
   binding_of_caller
   coffee-rails (~> 3.2.1)
   jquery-rails
